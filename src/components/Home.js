@@ -1,67 +1,29 @@
-import React from "react";
-import {Grid, Row, Col, Image, Button} from "react-bootstrap";
+import React, {Component} from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+  withRouter
+} from "react-router-dom";
+import "./styles.css"
+
+import linkedIn from "../images/linkedin.svg";
+import blogPic from "../images/blogger.svg";
+import resume from "../images/curriculum-vitae.svg";
 
 
-import photoBanner from "../images/banner.jpg";
-import linkedIn from "../images/linkedin.png";
 
-
-const page={
-	height:"100vh",
-	width:"100vw"
-}
-
-const twoFace={
-	height:"100%",
-	width:"inherit",
-}
-
-const bannerSide={
-	height:"100%",
-	backgroundColor:"black",
-	display: "flex",
-	justifyContent:"center",
-	alignItems:"center"
-}
-const lightSide={
-	height:"100%",
-	display: "flex",
-	justifyContent:"center",
-	alignItems:"center"
-}
-const title={
-	textAlign:"center",
-	fontFamily: "Open Sans sans-serif",
-	paddingBottom:"40px"
-}
-const paragrapgh={
-	fontFamily: "Open Sans sans-serif",
-	fontSize:"1em",
-	paddingBottom:"40px"
-}
-const resumeButton={
-	borderWidth:"2px",
-	borderColor:"black"
-}
-
-const linkedinIcon={
-	height:"21px",
-	width:"26px",
-}
-
-
-export default () =>(
+class Home extends Component {	
 	
-<Grid style={page}>
-	<Row style={twoFace}>
-		<Col xs={12} md={6} style={bannerSide}>
-			<Image src= {photoBanner} responsive />;
-	    </Col>
-	    <Col xs={12} md={6} style={lightSide} >
-				<div>
-					<h1 style={title}>Kweta Henry</h1>
-					<div >
-						<p style={paragrapgh}>Kweta Henry is a freelance writer, graphic designer and journalist with 3+ years of 
+
+	render(){
+		return(
+			<div className="cover"> 
+				
+				<div className="content">
+					<p className="description">
+						Kweta Henry is a freelance writer, graphic designer and journalist with 3+ years of 
 						experience in digital marketing. Her writing and research interests include issues of identity, 
 						politics & human rights, cross-cultural dialogue, and ancient african history. She recently completed 
 						her Master’s degree in Conflict Resolution. Last spring she received the 2017 Don Paulson Award for 
@@ -69,25 +31,20 @@ export default () =>(
 						University of Massachusetts Boston. Kweta is also a facilitator and volunteer mediator who has 
 						worked with organizations that train communities in conflict management skills and seek to build 
 						bridges across lines of difference, including Soliya, Habitus Inc., and Conflict Management @ MIT.
-						</p>	
-						<Row>
-							<Col xs={12} md={2}>
-								<Button href="http://alexguevara.me/khenryResume.pdf" style={resumeButton}>Resume</Button>
-							</Col>
-							<Col xs={12} md={2} >
-								<Button href="https://www.linkedin.com/in/kweta-henry-78159577/">
-									<Image src= {linkedIn} style={linkedinIcon} responsive />
-							</Button>
-							</Col>
-						</Row>
-					</div>
-					
+					</p>
+					<ul className="socialLinks">
+						<li> <a className="linkOrder" href="https://www.linkedin.com/in/kweta-henry-78159577/"> <img src={linkedIn} alt="linkedin"/> <p className="linkText">LinkedIn</p> </a></li>
+						<li> <Link className="linkOrder" to="/blog" > <img src={blogPic} alt="blog"/> <p className="linkText">My Blog</p> </Link>  </li>
+						<li> <Link className="linkOrder" to="./resume"> <img src={resume} alt="resume"/> <p className="linkText">Resume</p> </Link></li>
+					</ul>
 				</div>
-	    </Col>
-	</Row>
+			</div>
+		);
 
-</Grid>
+	}
+	
+	
+}
 
-
-);
+export default Home;
 

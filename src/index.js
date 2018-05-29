@@ -1,13 +1,34 @@
 import React from "react"; 
 import ReactDOM from 'react-dom';
-import App from "./App";
+
+import App from './components/App';
+
 import "./index.css";
-import 'bootstrap/dist/css/bootstrap.css';
-import registerServiceWorker from './registerServiceWorker';
+import "./components/styles.css"
+{/*import { CSSTransition } from 'react-transition-group';*/}
 
 
-ReactDOM.render(
-	<App/>,
-	document.getElementById('root')
-	);
-registerServiceWorker();
+	
+
+ReactDOM.render(( <App /> ), document.getElementById('root'))
+
+		{/*return ( 
+			<div>
+			Function to fade out image
+				<CSSTransition
+		        in={true}
+		        classNames="fade"
+		        appear={true}
+		        timeout={5000}>
+		 			<div>
+		 				<FadeImage/>
+		 			</div>
+		        </CSSTransition> 
+		    
+		        
+		    	
+		    </div>
+		);*/} 
+	
+
+

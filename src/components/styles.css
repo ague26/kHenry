@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+ul{
+	margin:0;
+	float:right;
+	width: 25%;
+
+}
+ul li{
+	display: inline-block;
+	text-decoration: none;
+}
+ h1,h4{
+	color:#696768;
+	margin:0;
+}
+a{
+	text-decoration: none;
+}
+.header{
+	padding: 5px 0px;
+	width: 100%;
+	height: 24vh;
+	background-color: #E7D6D6;
+	display: flex;
+	justify-content: center;
+}
+.navhead{
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	width: inherit;
+	height:12%;
+	border-bottom: 4px solid white;
+}
+.nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width:25%;
+	padding:0;
+	margin-right:15px;
+}
+.navLink:hover{
+	opacity: .6;
+}
+.image{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	height: 160px;
+	width:160px;
+	border-radius: 115px;
+	border: 4px solid white;
+}
+.cover{
+	background-color: #E7D6D6;
+	height:74vh;
+	width:100vw;
+}
+.content{
+	display: flex;
+	justify-content: center;
+	height:88%;
+	align-items: center;
+	flex-direction: column;
+}
+.description{
+	width: 41%;
+	line-height: 2rem;
+	color: #696768;
+	text-align: justify;
+
+}
+.socialLinks{
+	display:flex;
+	height: 80px;
+	padding: 0;
+	justify-content: center;
+}
+.socialLinks img{
+	height: 50px; 
+	width:50px;
+}
+.socialLinks li{	
+	align-self: center;
+	padding: 0px 20px;
+}
+.linkOrder{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.linkText {
+    opacity:0;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    margin: 0;
+    width: inherit;
+    color: #696768;
+    margin-top: 3px;
+
+}
+.linkOrder:hover > .linkText {
+    opacity:1;
+    
+}
+.tempMessage{
+	display: flex;
+	justify-content: center;
+
+}
+.resumeDoc{
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*These are for fading image using react transtion group
+.fade-appear {
+    opacity: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 5000ms ease-in;
+}
+
+.testings {
+   opacity: 0.01;
+}
+
+.testings-appear.testings-appear-active {
+    opacity: 1;
+    transition: opacity 20s ease-in;
+}*/
