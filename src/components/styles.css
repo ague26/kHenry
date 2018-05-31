@@ -23,53 +23,42 @@ a{
 .header{
 	padding: 5px 0px;
 	width: 100%;
-	height: 24vh;
+	height: 25vh;
 	background-color: #E7D6D6;
-	display: flex;
-	justify-content: center;
 }
 .navhead{
-	display: flex;
-	justify-content: flex-end;
-	position: absolute;
 	width: inherit;
-	height:12%;
+	height:50%;
+	text-align: center;
 	border-bottom: 4px solid white;
 }
-.nav{
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	width:25%;
-	padding:0;
-	margin-right:15px;
+.navgroup{
+	z-index:1;
 }
 .navLink:hover{
 	opacity: .6;
 }
+.imgContainer{
+	position: absolute;
+	top: 0%;
+}
 .image{
+	margin: auto;
 	display: flex;
-	justify-content: center;
-	position: relative;
-	height: 160px;
-	width:160px;
+	height: 90%;
+	width:23%;
 	border-radius: 115px;
 	border: 4px solid white;
 }
 .cover{
 	background-color: #E7D6D6;
-	height:74vh;
 	width:100vw;
+	height: 75vh;
 }
 .content{
-	display: flex;
-	justify-content: center;
-	height:88%;
-	align-items: center;
-	flex-direction: column;
+	height:85%;
 }
 .description{
-	width: 41%;
 	line-height: 2rem;
 	color: #696768;
 	text-align: justify;
@@ -120,9 +109,79 @@ a{
 	display: flex;
 	justify-content: center;
 }
+.resumecover{
+	padding-top: 10px;
+	height: 175vh;
+	width:100vw;
+	background-color: #E7D6D6;
+}
+.resumebuttons{
+	height: 65%;
+	width:80%;
+	padding: unset !important;
+}
+.resumebuttons a{
+	color: white;
+	padding-right: 5px;
+}
+.resumebuttons a:visited{
+	color: white;
+}
+/*.resumeLinks a{
+	height: 50px;
+	width:100%;
+	color:white;
+	border-radius: 10px;
+}*/
 
+/*.resumeLinks a:nth-child(1){
+	align-items: center;
+	background-color: #ff3333;
+	text-align: center;
+}*/
+/*.resumeLinks a:nth-child(2){
+	align-items: center;
+	background-color: #0040ff;
+	text-align: center;
+}*/
 
-
+@media only screen and (max-width: 600px) and (min-width: 350px) {
+	a:visited{
+		color: #cba6a6;
+	}
+	.header{
+		height: 15vh;
+	}
+	.description{
+		line-height: 1.5;
+	}
+	.longbottom{
+	height:10vh;
+	background-color: #E0E0E0;
+	}
+	.neville{
+		color: #cba6a6;
+		background-color: #E0E0E0!important;
+		align-items: center;
+		width:100%;
+		justify-content: space-around !important;
+	}
+	.resumecover{
+		height:75vh;
+	}
+	.resumebuttons{
+		height: 50%;
+		width:80%;
+		padding: unset !important;
+	}
+	.resumebuttons a{
+		color: white;
+		padding-right: 3px;
+	}
+	.resumebuttons a:visited{
+		color: white;
+	}
+}
 
 
 
