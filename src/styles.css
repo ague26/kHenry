@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+ul{
+	margin:0;
+	float:right;
+	width: 25%;
+
+}
+ul li{
+	display: inline-block;
+	text-decoration: none;
+}
+ h1,h4{
+	color:#696768;
+	margin:0;
+}
+a{
+	text-decoration: none;
+}
+*{
+	background-color: #f8f8f8;
+	font-family: "europa";
+	font-weight: 400;
+	font-size: 14px;
+}
+a:visited{
+	color: #aaa;
+}
+a:hover{
+	color:black;
+}
+
+		{/*Body Component Begins*/}
+
+.bodyContainer{
+	display: flex;
+	height: 70vh;
+}
+.sectionLeft{
+	display: inherit;
+	width:50%;
+	justify-content: center;
+}
+.sectionLeft p{
+	width: 80%;
+	line-height: 2em;
+	font-size:18px;
+}
+.sectionRight{
+	height: 77%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+.rowOne{
+	display: flex;
+	flex-direction: row;
+	height:50%;
+	align-self: flex-start;
+	width: 100%
+}
+.rowTwo{
+	display:flex;
+	flex-direction: row;
+	height: 50%;
+	align-self: flex-start;
+	width:100%;
+}
+.boxOne{
+	height: 90%;
+	width: 22vw;
+	align-self: flex-end;
+	background-image: url(./images/blogBG.jpg);
+	background-position: center;
+	background-size: 82% 130%;
+	position: relative;
+}
+.boxOne:after{
+	position: absolute;
+	content: " ";
+	display: block;
+    position: absolute;
+    background-image: url(./images/greyPattern.jpg);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.hoverBoxOne{
+	height: 90%;
+	width: 22vw;
+	align-self: flex-end;
+	background-image: url(./images/blogBG.jpg);
+	background-position: center;
+	background-size: 82% 130%;
+	position: relative;
+}
+.boxTwo{
+	height: 90%;
+	width: 22vw;
+	align-self: flex-end;
+}
+.boxThree{
+	height: 90%;
+	width: 22vw;
+}
+.boxFour{
+	background-image: url(./images/work.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+	height: 90%;
+	width: 22vw;
+	position: relative;
+}
+.boxFour:after{
+	position: absolute;
+	content: " ";
+	display: block;
+    position: absolute;
+    background-image: url(./images/greyPattern.jpg);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.4;
+}
+.hoverBoxFour{
+	background-image: url(./images/work.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+	height: 90%;
+	width: 22vw;
+	position: relative;
+}
+
+	{/*Body Component Ends */}
+
+	{/*Header Component Starts*/}
+
+.headerContainer{
+	display: flex;
+	height: 30vh;
+	justify-content: space-around;
+	align-items: center;
+	color: #aaa;
+}
+.leftNav{
+	width: 8vw;
+	display: flex;
+	justify-content: space-around;
+}
+.middleNav{
+	width: 25vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.middleNav h2{
+	font-weight: 700;
+	font-size: 29px;
+	color:black;
+	letter-spacing: 5px;
+}
+.logo{
+	border-radius: 100px;
+	height: 7vw;
+}
+
+.rightNav{
+	width: 8vw;
+	display: flex;
+	justify-content: space-around;
+}
+
+	{/*Header Component Ends*/}
+
+	{/*Blog Component Begins*/}
+
+.blogContainer{
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	align-items: center;
+	flex-direction: column;
+}
+.formContainer{
+	display: flex;
+	height: 50%;
+	width: 40%;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+}
+.titleBlog{
+	display: inherit;
+	flex-direction: column;
+	width: 100%;
+	height: 20%
+}
+.titleBlog h1{
+	align-self: center;
+}
+.titleBlog p{
+	align-self: flex-end;
+}
+.textBoxContainer{
+	width: 100%;
+	height:90%;
+	padding: 2% 0%;
+	height: 80%;
+}
+.textBoxContainer textarea{
+	resize:none;
+	height: inherit;
+	width: inherit;
+	padding: unset;
+}
+.submit{
+	align-self: flex-end;
+}
+.blogHistoryContainer{
+	display: flex;
+	width: 70%;
+	height: 60%;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+}
+.blogPost{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+	{/*Blog Component Ends*/}
+
+
+
+
+@media only screen and (max-width: 600px) and (min-width: 350px) {
+	a:visited{
+		color: #cba6a6;
+	}
+	.header{
+		height: 15vh;
+	}
+	.description{
+		line-height: 1.5;
+	}
+	.longbottom{
+	height:10vh;
+	background-color: #E0E0E0;
+	}
+	.neville{
+		color: #cba6a6;
+		background-color: #E0E0E0!important;
+		align-items: center;
+		width:100%;
+		justify-content: space-around !important;
+	}
+	.resumecover{
+		height:75vh;
+	}
+	.resumebuttons{
+		height: 50%;
+		width:80%;
+		padding: unset !important;
+	}
+	.resumebuttons a{
+		color: white;
+		padding-right: 3px;
+	}
+	.resumebuttons a:visited{
+		color: white;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*These are for fading image using react transtion group
+.fade-appear {
+    opacity: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 5000ms ease-in;
+}
+
+.testings {
+   opacity: 0.01;
+}
+
+.testings-appear.testings-appear-active {
+    opacity: 1;
+    transition: opacity 20s ease-in;
+}*/
