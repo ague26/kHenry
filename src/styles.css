@@ -1,18 +1,8 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
 ul{
-	margin:0;
-	float:right;
-	width: 25%;
+	padding:0;
 
 }
-ul li{
-	display: inline-block;
-	text-decoration: none;
-}
+
  h1,h4{
 	color:#696768;
 	margin:0;
@@ -244,7 +234,27 @@ a:hover{
 
 	{/*Blog Component Ends*/}
 
+	{/*BlogPost Component Begins*/}
 
+.paginationContainer{
+	display: flex;
+	width:70%;
+	justify-content: center;
+}
+.pagination{
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	width:inherit;
+}
+.pagination li{
+	cursor: pointer;
+	color:red;
+	font-size:1.2em;
+}
+
+
+	{/*BlogPost Component Begins*/}
 
 
 @media only screen and (max-width: 600px) and (min-width: 350px) {
