@@ -2,12 +2,11 @@ import React,{Component} from 'react';
 import firebase from './firebase';
 
 class Blog extends Component{
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state={
 			title: '',
 			textBox: '',
-			blogs: []
 		}
 	}
 
@@ -32,26 +31,16 @@ class Blog extends Component{
 		alert("Your Blog has been posted");
 
 	};
-
-	componentDidMount() {
-		const blogRef = firebase.database().ref('blog');
-		blogRef.on('value', (snapshot) => {
-	    	let blogs = snapshot.val();
-	    	let newState = [];
-	    	for (let item in blogs) {
-	      	newState.push({
-	        	id: item,
-	        	title: blogs[item].title,
-	        	textBox: blogs[item].textBox
-	      	});
-	   	}
-	    this.setState({
-	      blogs: newState
-	    });
-	  });
+	static getDerivedStateFromProps(props, state){
+		if(props.blogs !== state.blogs){
+			return{
+				blogs: props.blogs
+			};
+		}
+		return null
 	}
-	render(){
 
+	render(){
 		return(
 			<div className="blogContainer">
 				<form className="formContainer" onSubmit={this.submitChanges}>

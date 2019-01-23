@@ -232,9 +232,7 @@ a:hover{
 	display: flex;
 	width: 70%;
 	height: 60%;
-	justify-content: space-between;
 	flex-direction: column;
-	align-items: center;
 }
 .blogPost{
 	display: flex;

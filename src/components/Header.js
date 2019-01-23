@@ -12,8 +12,8 @@ class Header extends Component{
 		return(	
 			<div className="headerContainer">
 				<div className="leftNav"> 
+					<Link to="/">Home</Link>
 					<a href={Resume}>Resume</a>
-					<Link to="/blog">Blog</Link>	
 				</div>	
 				
 				<div className="middleNav">
@@ -23,8 +23,8 @@ class Header extends Component{
 				</div>
 				
 				<div className="rightNav">
-					<Link to="/">About</Link>
-					<a>Contact</a> 
+					<Link to="/publicblog">Blog</Link>	
+					<Link to="/blog">Admin</Link> 
 				</div>
 
 			</div>	

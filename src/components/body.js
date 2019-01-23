@@ -41,7 +41,7 @@ class Body extends Component{
 	}
 	blogPic = () =>{
 		return(
-			<Link to="/blog" className="hoverBoxOne" onMouseLeave={this.zoomOutOne}>
+			<Link to="/publicblog" className="hoverBoxOne" onMouseLeave={this.zoomOutOne}>
 
 			</Link>
 		)
