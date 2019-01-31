@@ -26,11 +26,15 @@ class PublicBlog extends Component{
 		const beginIndex= lastIndex - this.state.perPage;
 		const currentBlogDisplay=this.state.blogs.slice(beginIndex,lastIndex);
 
-		const renderBlogDisplay = currentBlogDisplay.map(blogs =>{
+		const renderBlogDisplay = currentBlogDisplay.slice(0).reverse().map(blogs =>{
 			return(
-				<div key={blogs.id} className="blogPost">
-	            	<h3>{blogs.title}</h3>
-	           		<p>{blogs.textBox}</p>
+				<div key={blogs.id} className="publicBlogPost">
+					<div className="publicTitleBlog"> 
+						<span> </span>
+						<h3 className="publicTitle titleBlog">{blogs.title}</h3>
+		            	<p>{blogs.currentDate} </p>
+					</div>
+	           		<p className="publicBlogContent">{blogs.textBox}</p>
 	          	</div>
 			)
 		}) 

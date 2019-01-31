@@ -178,7 +178,7 @@ a:hover{
 
 .blogContainer{
 	display: flex;
-	height: 100vh;
+	height: 110vh;
 	width: 100%;
 	align-items: center;
 	flex-direction: column;
@@ -186,59 +186,84 @@ a:hover{
 .formContainer{
 	display: flex;
 	height: 50%;
-	width: 40%;
+	width: 70%;
 	justify-content: space-between;
 	flex-direction: column;
 	align-items: center;
 }
 .titleBlog{
 	display: inherit;
-	flex-direction: column;
+	flex-direction: row;
 	width: 100%;
-	height: 20%
+	height: 38%;
+	justify-content: space-between;
+	align-content: center;
+
 }
-.titleBlog h1{
+.titleBlog input{
 	align-self: center;
+	width:50%;
 }
 .titleBlog p{
-	align-self: flex-end;
+	align-self: center;
+	margin:0;
 }
 .textBoxContainer{
 	width: 100%;
-	height:90%;
-	padding: 2% 0%;
-	height: 80%;
+	margin-bottom: 2%;
+	height: 70%;
+	background-color: white;
 }
 .textBoxContainer textarea{
 	resize:none;
-	height: inherit;
+	height: 100%;
 	width: inherit;
 	padding: unset;
 }
 .submit{
 	align-self: flex-end;
+	height: 15%;
 }
 .blogHistoryContainer{
 	display: flex;
 	width: 70%;
-	height: 60%;
+	height: 90%;
 	flex-direction: column;
+	margin-top: 10px;
 }
 .blogPost{
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 	align-items: center;
+	background-color: white;
 }
-
+.removeAdd{
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	height: 38%;
+	background-color: white;
+}
+.updateCancel{
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	background-color: white;
+}
+.editText{
+	width:99%;
+	margin-top: 10px;
+}
 
 	{/*Blog Component Ends*/}
 
-	{/*BlogPost Component Begins*/}
+	{/*publicBlog Component Begins*/}
 
 .paginationContainer{
 	display: flex;
 	width:70%;
+	height: 10%;
 	justify-content: center;
 }
 .pagination{
@@ -252,9 +277,41 @@ a:hover{
 	color:red;
 	font-size:1.2em;
 }
+.blogBorder{
+/*	border: 2px solid red;
+*/	margin:12px 0;
+}
 
+.publicTitle{
+	width: auto;
+	background-color: white;
+}
 
-	{/*BlogPost Component Begins*/}
+.publicBlogPost{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	border: 1px solid black;
+	margin-bottom: 20px;
+}
+.publicBlogContent{
+	width: 95%;
+	background-color: white;
+}
+.publicTitleBlog{
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.publicTitleBlog p{
+	background-color: white;
+	margin-right: 5px;
+}
+
+	{/*publicBlog Component Ends*/}
 
 
 @media only screen and (max-width: 600px) and (min-width: 350px) {

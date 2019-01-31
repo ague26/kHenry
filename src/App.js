@@ -22,7 +22,8 @@ class App extends Component {
 		      	newState.push({
 		        	id: item,
 		        	title: blogs[item].title,
-		        	textBox: blogs[item].textBox
+		        	textBox: blogs[item].textBox,
+		        	currentDate: blogs[item].currentDate,
 		      	});
 		   	}
 		    this.setState({
@@ -31,16 +32,6 @@ class App extends Component {
 	  	});
 
 	}
-	// yourAnIdiot =()=>{
-	// 	const myArray =[0, 1, 2, 5, 8, 2]
-	// 	for(let n in myArray){
-	// 		if(myArray[n]===8){
-	// 			console.log(`Number 8 is in myArray ${n}`)
-	// 		}
-			
-			
-	// 	}
-	// }
 
   render() {
   	// this.yourAnIdiot();
