@@ -313,6 +313,23 @@ a:hover{
 
 	{/*publicBlog Component Ends*/}
 
+	{/* Login Component Begins */}
+.loginContainer{
+	height:100vh;
+	width: 100vw;
+}
+.loginForm{
+	height: 25%;
+	width: 25%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	margin:auto;
+}
+	
+
+
+	{/* Login Component Begins */}
 
 @media only screen and (max-width: 600px) and (min-width: 350px) {
 	a:visited{

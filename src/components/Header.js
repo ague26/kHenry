@@ -24,7 +24,7 @@ class Header extends Component{
 				
 				<div className="rightNav">
 					<Link to="/publicblog">Blog</Link>	
-					<Link to="/blog">Admin</Link> 
+					<Link to="/login">Admin</Link> 
 				</div>
 
 			</div>	

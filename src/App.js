@@ -3,6 +3,7 @@ import Header from './components/header';
 import Body from './components/body';
 import Blog from './components/blog';
 import PublicBlog from './components/publicblog';
+import Login from './components/login'
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import firebase from './components/firebase';
 
@@ -43,6 +44,7 @@ class App extends Component {
 	        	<Route exact path="/" component={Body}  />
 	    		<Route path="/blog" render={(props) => <Blog blogs={this.state.blogs} />}/>
 	    		<Route path="/publicblog" render={(props)=> <PublicBlog blogs={this.state.blogs}/>} />
+	    		<Route path="/login" component={Login}  />
 	    	</div>
 	    	
     	</Router>
