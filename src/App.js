@@ -11,7 +11,8 @@ class App extends Component {
 	constructor(props){
 		super(props)
   		this.state={
-  			blogs: []
+  			blogs: [],
+  			login:false
   		}
   	}
 	componentDidMount() {
@@ -44,7 +45,7 @@ class App extends Component {
 	        	<Route exact path="/" component={Body}  />
 	    		<Route path="/blog" render={(props) => <Blog blogs={this.state.blogs} />}/>
 	    		<Route path="/publicblog" render={(props)=> <PublicBlog blogs={this.state.blogs}/>} />
-	    		<Route path="/login" component={Login}  />
+	    		<Route path="/login" render={(props)=> <Login login={this.state.login}/>} />
 	    	</div>
 	    	
     	</Router>

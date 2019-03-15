@@ -10,7 +10,6 @@ class Login extends Component{
 		this.state=({
 			username: '',
 			password: '',
-			login: false
 		});
 	}
 
@@ -20,6 +19,15 @@ class Login extends Component{
 		})
 	}
 	
+	static getDerivedStateFromProps(props, state){
+		if(props.login !== state.login){
+			return{
+				login: props.login
+			};
+		}
+		return null
+	}
+
 	signIn = e => {
 		e.preventDefault();
 		let email= this.state.username;
@@ -52,17 +60,20 @@ class Login extends Component{
      	 return <Redirect to='/blog' />
     	}
 		return(
-
-			<div className="loginContainer">
-				<form className="loginForm" onSubmit={this.signIn}>
-					<h1 style={{textAlign:"center"}}> Login </h1>
-					<input type="text" name="username" placeholder="Username" value= {this.state.username} onChange= {this.handleChanges} /> 
-					<input type="password" name="password" placeholder="Password" value= {this.state.password} onChange= {this.handleChanges} />
-					<button> Submit </button>
-				</form>
-			}
-		</div>
-
+			 (this.state.login === true ) ?
+				<p>hello</p>
+				:
+				<div className="loginContainer">
+					<form className="loginForm" onSubmit={this.signIn}>
+						<h1 style={{textAlign:"center"}}> Login </h1>
+						<input type="text" name="username" placeholder="Username" value= {this.state.username} onChange= {this.handleChanges} /> 
+						<input type="password" name="password" placeholder="Password" value= {this.state.password} onChange= {this.handleChanges} />
+						<button> Submit </button>
+					</form>
+					
+				</div>
+				
+			
 		)
 	}
 }
